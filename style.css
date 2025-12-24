@@ -1,0 +1,222 @@
+/* --- GLOBAL SETTINGS --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+body {
+    /* 1. The Perfect Parchment Color */
+    background-color: #f4e4bc; 
+    
+    /* 2. A subtle gradient to make it look worn (lighter top, darker bottom) */
+    background-image: linear-gradient(to bottom, #eaddcf 0%, #dcc8b3 100%);
+
+    /* 3. The "Vignette" - Dark shadows in the corners like an old map */
+    box-shadow: inset 0 0 120px rgba(44, 30, 10, 0.4);
+
+    /* 4. Essential settings to make the shadow cover the whole screen */
+    margin: 0;
+    min-height: 100vh;
+    background-attachment: fixed;
+
+    /* 5. Change text color to Dark Brown (looks better than black on parchment) */
+    color: #3e2b1b;
+    font-family: 'Georgia', 'Times New Roman', serif; /* Serif font fits the D&D vibe */
+}
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+}
+
+a { text-decoration: none; transition: transform 0.2s; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* --- HERO SECTION --- */
+.hero-section { position: relative; text-align: center; width: 100%; margin-bottom: 2rem; }
+.hero-image-container { position: relative; width: 100%; max-width: 1400px; margin: 0 auto; }
+.main-group-photo { width: 100%; height: auto; display: block; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; }
+.main-logo-text {
+    position: absolute; top: 5%; width: 100%; text-align: center;
+    font-size: 5vw; color: white; text-shadow: 2px 2px 4px #000, 0 0 20px rgba(0,0,0,0.8);
+    letter-spacing: 2px;
+}
+.hero-subtitle {
+    font-family: 'Roboto', sans-serif; font-weight: 900; font-size: 1.5rem;
+    text-transform: uppercase; text-align: center; margin-top: 20px; letter-spacing: 1px;
+}
+
+/* --- ABOUT SECTION --- */
+.about-section { padding: 40px 0; }
+.about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: start; }
+.about-image img { width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.about-text h2 { font-size: 3rem; margin-bottom: 20px; }
+.about-text p { font-size: 1.1rem; margin-bottom: 15px; }
+.players-list { margin: 25px 0; padding-left: 15px; border-left: 4px solid #000; }
+.orange-link { display: inline-block; color: #e67e22; font-weight: 900; text-decoration: underline; font-size: 1.2rem; margin-top: 15px; }
+
+/* --- SOCIAL BAR --- */
+.social-bar { background-color: black; color: white; text-align: center; padding: 30px 0; margin-bottom: 50px; }
+.social-icons-big { display: flex; justify-content: center; gap: 20px; }
+.icon-sq { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: white; font-size: 2rem; }
+.youtube { background: #ff0000; }
+.facebook { background: #1877f2; }
+.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.tiktok { background: #000; border: 1px solid #333; }
+.icon-sq:hover { transform: scale(1.1); }
+
+/* --- MEMBERS SECTION --- */
+.members-section { padding-bottom: 80px; }
+/* --- OPRAVENÝ FLEXBOX (Centrovaná pyramida) --- */
+
+.members-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* To zajistí, že spodní řada bude uprostřed */
+    gap: 30px;
+    
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.member-card {
+    /* TOTO JE TA OPRAVA: */
+    width: 350px;       /* Nastavíme pevnou ideální šířku */
+    max-width: 100%;    /* Aby na mobilu nepřečuhovaly */
+    flex-grow: 0;       /* DŮLEŽITÉ: Zakážeme jim roztahování do šířky! */
+    
+    /* Zbytek stylů */
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* --- Úprava pro mobily --- */
+@media (max-width: 768px) {
+    .member-card {
+        width: 100%; /* Na mobilu ať se roztáhnou, tam je to hezčí */
+    }
+}
+.member-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
+.member-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.member-card:hover img { transform: scale(1.05); }
+
+/* Overlay & Name */
+.card-overlay {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, transparent 60%);
+    display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+    padding-bottom: 30px;
+}
+
+.name-pill {
+    background: white; color: #D32F2F; padding: 10px 25px; border-radius: 50px;
+    font-family: 'Roboto', sans-serif; font-weight: 900; font-size: 1.1rem;
+    text-transform: uppercase; box-shadow: 0 4px 8px rgba(0,0,0,0.3); letter-spacing: 0.5px;
+}
+.click-hint { color: #ccc; font-size: 0.8rem; margin-top: 10px; opacity: 0.8; font-weight: bold; }
+
+/* Text Colors */
+.blue-text { color: #000080; }
+.green-text { color: #006400; }
+.purple-text { color: #6a1b9a; }
+.orange-text { color: #e65100; }
+
+/* --- MODAL (POP-UP) STYLES --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.85); /* Black transparent background */
+    backdrop-filter: blur(5px);
+    overflow: auto; /* Enable scrolling if content is tall */
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #f5e6c0; /* Parchment */
+    margin: 50px auto;
+    padding: 40px;
+    border: 2px solid #5c4033;
+    border-radius: 10px;
+    width: 90%; max-width: 800px;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,1);
+    animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn { from {opacity: 0; transform: translateY(-20px);} to {opacity: 1; transform: translateY(0);} }
+
+.close-btn {
+    position: absolute; top: 15px; right: 25px;
+    color: #5c4033; font-size: 40px; font-weight: bold; cursor: pointer;
+}
+.close-btn:hover { color: #d32f2f; }
+
+/* Inside Modal Styling */
+.modal-header { text-align: center; border-bottom: 2px solid #5c4033; padding-bottom: 20px; margin-bottom: 20px; }
+.modal-header h2 { font-size: 2.5rem; color: #333; }
+.modal-role { font-weight: bold; color: #666; font-size: 1.2rem; text-transform: uppercase; }
+
+/* Stat Grid Layout */
+.char-details { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.char-image img { width: 100%; border-radius: 10px; border: 2px solid #333; }
+
+.stat-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 20px; background: rgba(0,0,0,0.1); padding: 15px; border-radius: 10px; }
+.stat-box { text-align: center; border: 1px solid #5c4033; padding: 5px; background: #fff; border-radius: 5px; }
+.stat-label { display: block; font-size: 0.7rem; font-weight: bold; color: #666; }
+.stat-val { display: block; font-size: 1.2rem; font-weight: 900; font-family: 'Cinzel', serif; }
+
+/* Sellsword Special Layout */
+.trio-container { display: flex; flex-direction: column; gap: 20px; }
+.trio-row { background: rgba(255,255,255,0.5); padding: 15px; border-radius: 8px; border-left: 5px solid #d32f2f; }
+.trio-name { font-size: 1.4rem; font-family: 'Cinzel', serif; font-weight: bold; color: #d32f2f; }
+.trio-class { font-weight: bold; color: #333; margin-bottom: 5px; display: block; }
+.trio-stats { font-family: monospace; font-size: 1rem; color: #000; background: #fff; padding: 5px; display: inline-block; border-radius: 4px; border: 1px solid #ccc; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .main-logo-text { font-size: 3rem; }
+    .about-grid, .char-details { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: repeat(3, 1fr); } /* 3x2 stats on mobile */
+}
+
+/* --- RESTORING SOCIAL BUTTONS --- */
+
+.card-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    z-index: 10; /* Ensures buttons sit on top of the card click area */
+}
+
+.btn-sm {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+    background: rgba(0,0,0,0.6); /* Semi-transparent background */
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-sm:hover {
+    transform: scale(1.15);
+    background: #d32f2f; /* Red on hover */
+    border-color: white;
+}
+
+/* Adjust the click hint to sit below buttons */
+.click-hint {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-top: 5px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}

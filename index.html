@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min-Maxed: Unofficial Fan Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="Minmaxed.ico">
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="hero-image-container">
+            <img src="https://images.squarespace-cdn.com/content/v1/6929ed0c08fb811934864934/9e17eb8f-627b-49a1-92ca-a3d05734e5a0/Min-Maxed+Post-3+%282%29.png?format=2500w" alt="Min-Maxed Group" class="main-group-photo">
+            
+            <h1 style="color: transparent;">min maxed</h1>
+        </div>
+        <div class="hero-subtitle">THE UNOFFICIAL FAN WEBSITE</div>
+    </header>
+
+    <section class="about-section">
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="https://images.squarespace-cdn.com/content/v1/6929ed0c08fb811934864934/78eb6910-d3e6-4422-a110-c84f22210782/Min-Maxed+Post-1.png?format=1500w" alt="The Party">
+            </div>
+            <div class="about-text">
+                <h2>Witness the Chaos</h2>
+                <p class="intro-text">
+                    <strong>The internet begged for it.</strong> The dice gods demanded it. Now, the biggest names in SwordTube have united to break the game (and probably the DM's sanity).
+                </p>
+                <p>
+                    Welcome to the <strong>Unofficial Archive</strong> of the <em>Min-Maxed</em> campaign. This is where we catalogue the crits, the fails, and the absolutely broken character builds of the "Deadly Nerds."
+                </p>
+                
+                <div class="players-list">
+                    <p><strong>The Party:</strong> " A Chaos Fighter, a Half-goblin Rogue, and a Tome Warlock, a Bard with a whip, a Fey Ranger moving in jump-cuts, and a Monk playing tetherball with a meteor hammer."</p>
+                    <p><strong>The Victim (DM):</strong> Tater the Bard</p>
+                </div>
+
+                <p>From the depths of the Sellsword Arts Studio in Texas comes a campaign of epic proportions. We are just here to take notes and enjoy the fireworks.</p>
+                
+                <a href="https://www.minmaxedrpg.com" target="_blank" class="orange-link">Look at their official website.</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="social-bar">
+        <h3>Support MinMaxed (Official Links):</h3>
+        <div class="social-icons-big">
+            <a href="https://www.youtube.com/@Min-Maxed-RPG" class="icon-sq youtube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/people/Min-Maxed-RPG/61584428039267/" class="icon-sq facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/minmaxedrpg/" class="icon-sq instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@min.maxed.rpg?is_from_webapp=1&sender_device=pc" class="icon-sq tiktok"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+
+    <section class="members-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 10px; font-size: 2.5rem;">HALL OF LEGENDS</h2>
+            <p style="text-align: center; margin-bottom: 40px; font-style: italic; color: #666;">The only "finished" character is Blumineck's the rest didn't share their full builds as of now.</p>
+            <p style="text-align: center; margin-bottom: 40px; font-style: italic; color: #666;">Click a card to see their broken stats</p>
+            
+            <div class="members-grid">
+                
+                <div class="member-card" onclick="openModal('sellsword')">
+                    <img src="https://images.squarespace-cdn.com/content/v1/6929ed0c08fb811934864934/472fb971-b448-4c36-aa97-7a951438bf56/Min-Maxed+Post-2.png?format=2500w" alt="Sellsword">
+                    <div class="card-overlay">
+                        <div class="name-pill">SELLSWORD ARTS</div>
+                        <div class="card-socials">
+                            <a href="https://www.youtube.com/@SellswordArts" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/sellswordarts/" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@sellswordarts" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                        <span class="click-hint">INSPECT BUILD</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openModal('jacques')">
+                    <img src="https://images.squarespace-cdn.com/content/v1/6929ed0c08fb811934864934/5145fe27-9cbd-40eb-b561-ab1fcf890fb5/181110_JackZeWhipper_LRF-14+%281%29.jpg?format=2500w" alt="Jacques">
+                    <div class="card-overlay">
+                        <div class="name-pill blue-text">JACQUES THE WHIPPER</div>
+                        <div class="card-socials">
+                            <a href="https://www.youtube.com/c/JacquesZeWhipper" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/jacqueszewhipper/?hl=en" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@jacquesthewhipper" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                        <span class="click-hint">INSPECT BUILD</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openModal('blumineck')">
+                    <img src="https://images.squarespace-cdn.com/content/v1/6929ed0c08fb811934864934/78ba939a-1ec0-4d24-9f73-3f4d34eed0cc/IMG_9386.png?format=2500w" alt="Blumineck">
+                    <div class="card-overlay">
+                        <div class="name-pill green-text">BLUMINECK</div>
+                        <div class="card-socials">
+                            <a href="https://www.youtube.com/@Blumineck" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/blumineck/" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@blumineck" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                        <span class="click-hint">INSPECT BUILD</span>
+                    </div>
+                </div>
+
+                 <div class="member-card" onclick="openModal('bensei')">
+                    <img src="https://images.squarespace-cdn.com/content/v1/6929ed0c08fb811934864934/65165b42-c856-4f15-8616-253cea7c0b95/Profile+photo+%28all+platforms%29.jpg?format=2500w" alt="Bensei">
+                    <div class="card-overlay">
+                        <div class="name-pill purple-text">INSTRUCTOR BENSEI</div>
+                        <div class="card-socials">
+                            <a href="https://www.youtube.com/@instructor_bensei" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/instructor_bensei/?hl=en" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@instructor_bensei?lang=en" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                        <span class="click-hint">INSPECT BUILD</span>
+                    </div>
+                </div>
+
+                 <div class="member-card" onclick="openModal('tater')">
+                    <img src="https://images.squarespace-cdn.com/content/v1/6929ed0c08fb811934864934/97aa97d7-409c-4db4-bea3-3bf19c1e0613/IMG_20251128_132646.jpg?format=2500w" alt="Tater">
+                    <div class="card-overlay">
+                        <div class="name-pill orange-text">TATER THE BARD</div>
+                        <div class="card-socials">
+                            <a href="https://www.youtube.com/@Tater_the_Bard" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/tater_the_bard/?hl=en" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@tater_the_bard" target="_blank" class="btn-sm" onclick="event.stopPropagation()"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                        <span class="click-hint">INSPECT DM</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #222; color: #888; text-align: center; padding: 30px 20px; font-size: 0.8rem; margin-top: 50px;">
+    
+    <p><strong>Unofficial Fan Site.</strong> This website is a community project and is not affiliated with, endorsed by, or connected to Sellsword Arts or the Min-Maxed production team.</p>
+    <p style="margin-bottom: 25px;">All images and trademarks belong to their respective owners. We just like the dice rolls.</p>
+
+    <div style="border-top: 1px solid #444; padding-top: 15px; width: 60%; margin: 0 auto;">
+        <p style="margin-bottom: 10px; color: #aaa;">Site built by <strong>Tomáš Koval</strong></p>
+          <p style="margin-bottom: 10px; color: #aaa;">Code written by <strong>Tomáš Koval with heavy AI help</strong></p>
+        
+        <a href="mailto:tomas.koval2000@gmail.com" title="Email Me" style="color: #ccc; font-size: 1.3rem; margin: 0 10px; text-decoration: none; transition: color 0.3s;">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+        <a href="https://github.com/Kobalt-cz" target="_blank" title="My GitHub" style="color: #ccc; font-size: 1.3rem; margin: 0 10px; text-decoration: none; transition: color 0.3s;">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+
+</footer>
+
+    <div id="characterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <div id="data-sellsword" style="display:none;">
+        <div class="modal-header">
+            <h2>SELLSWORD ARTS</h2>
+            <div class="modal-role">THE "EXPERTS"</div>
+        </div>
+        
+        <div class="trio-container" style="display: flex; gap: 10px; align-items: stretch;">
+
+            <div class="character-card" style="flex: 1; background-color: #f9f4e6; border-top: 5px solid #d32f2f; padding: 10px; font-size: 0.85em; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+                <h3 style="color: #d32f2f; margin-top: 0; text-align: center; margin-bottom: 2px;">DAVID</h3>
+                <p style="text-align: center; font-style: italic; color: #555; margin: 0 0 10px 0;">THE "WELL, ACTUALLY" GUY</p>
+                <p style="text-align: center; margin: 0 0 5px 0;"><strong>Class:</strong> Rogue (Swashbuckler)</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background-color: #eaddcf; padding: 5px; border-radius: 5px; text-align: center; font-family: monospace; font-weight: bold; margin-bottom: 10px;">
+                    <span>STR:-</span> <span>DEX:-</span> <span>CON:-</span>
+                    <span>INT:-</span> <span>WIS:-</span> <span>CHA:-</span>
+                </div>
+
+                <h4 style="color: #d32f2f; border-bottom: 1px solid #d32f2f; padding-bottom: 3px; font-size: 1em; margin-bottom: 5px;">KEY FEATS</h4>
+                <ul style="list-style: none; padding-left: 0; margin: 0;">
+                    <li style="margin-bottom: 5px;">🤺 <strong>Fancy Footwork:</strong> No opportunity attacks after you strike.</li>
+                    <li style="margin-bottom: 5px;">🗡️ <strong>Rakish Audacity:</strong> +CHA to Initiative. Sneak Attack in 1v1.</li>
+                    <li style="margin-bottom: 5px;">👻 <strong>Uncanny Dodge:</strong> Reaction to halve incoming damage.</li>
+                </ul>
+            </div>
+
+            <div class="character-card" style="flex: 1; background-color: #f9f4e6; border-top: 5px solid #d32f2f; padding: 10px; font-size: 0.85em; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+                <h3 style="color: #d32f2f; margin-top: 0; text-align: center; margin-bottom: 2px;">CLARK</h3>
+                <p style="text-align: center; font-style: italic; color: #555; margin: 0 0 10px 0;">AND I AM CLARK</p>
+                <p style="text-align: center; margin: 0 0 5px 0;"><strong>Class:</strong> Fighter (Champion)</p>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background-color: #eaddcf; padding: 5px; border-radius: 5px; text-align: center; font-family: monospace; font-weight: bold; margin-bottom: 10px;">
+                    <span>STR:-</span> <span>DEX:-</span> <span>CON:-</span>
+                    <span>INT:-</span> <span>WIS:-</span> <span>CHA:-</span>
+                </div>
+
+                <h4 style="color: #d32f2f; border-bottom: 1px solid #d32f2f; padding-bottom: 3px; font-size: 1em; margin-bottom: 5px;">KEY FEATS</h4>
+                <ul style="list-style: none; padding-left: 0; margin: 0;">
+                    <li style="margin-bottom: 5px;">💥 <strong>Improved Critical:</strong> Crit on 19 or 20.</li>
+                    <li style="margin-bottom: 5px;">🌪️ <strong>Action Surge:</strong> Gain one extra Action (Once/Rest).</li>
+                    <li style="margin-bottom: 5px;">🍖 <strong>Second Wind:</strong> Bonus Action heal (1d10 + Lvl).</li>
+                </ul>
+            </div>
+
+            <div class="character-card" style="flex: 1; background-color: #f9f4e6; border-top: 5px solid #d32f2f; padding: 10px; font-size: 0.85em; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+                <h3 style="color: #d32f2f; margin-top: 0; text-align: center; margin-bottom: 2px;">MEGAN</h3>
+                <p style="text-align: center; font-style: italic; color: #555; margin: 0 0 10px 0;">THE BOOKTOK WARLOCK</p>
+                <p style="text-align: center; margin: 0 0 5px 0;"><strong>Class:</strong> Warlock (Pact of Tome)</p>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background-color: #eaddcf; padding: 5px; border-radius: 5px; text-align: center; font-family: monospace; font-weight: bold; margin-bottom: 10px;">
+                    <span>STR:-</span> <span>DEX:-</span> <span>CON:-</span>
+                    <span>INT:-</span> <span>WIS:-</span> <span>CHA:-</span>
+                </div>
+
+                <h4 style="color: #d32f2f; border-bottom: 1px solid #d32f2f; padding-bottom: 3px; font-size: 1em; margin-bottom: 5px;">KEY FEATS</h4>
+                <ul style="list-style: none; padding-left: 0; margin: 0;">
+                    <li style="margin-bottom: 5px;">📖 <strong>Pact of the Tome:</strong> Grants 3 extra Cantrips.</li>
+                    <li style="margin-bottom: 5px;">✨ <strong>Agonizing Blast:</strong> Add +CHA to blast damage.</li>
+                    <li style="margin-bottom: 5px;">📜 <strong>Book of Secrets:</strong> Can cast Rituals from any class.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="data-jacques" style="display:none;">
+        <div class="modal-header">
+            <h2>JACQUES THE WHIPPER</h2>
+            <div class="modal-role">"Brings a whip to a sword fight."</div>
+        </div>
+        <div class="char-details">
+            <div class="char-image">
+                <img src="https://images.squarespace-cdn.com/content/v1/6929ed0c08fb811934864934/5145fe27-9cbd-40eb-b561-ab1fcf890fb5/181110_JackZeWhipper_LRF-14+%281%29.jpg?format=2500w">
+            </div>
+            <div class="char-info">
+                <h4>Unknown</h4>
+                <p><strong>Class:</strong>Level 5 Bard (Unknown) </p>
+                <p><strong>Species: </strong> Unknown </p>
+                
+                <div class="stat-grid">
+                    <div class="stat-box"><span class="stat-label">STR</span><span class="stat-val">13</span></div>
+                    <div class="stat-box"><span class="stat-label">DEX</span><span class="stat-val">16</span></div>
+                    <div class="stat-box"><span class="stat-label">CON</span><span class="stat-val">14</span></div>
+                    <div class="stat-box"><span class="stat-label">INT</span><span class="stat-val">9</span></div>
+                    <div class="stat-box"><span class="stat-label">WIS</span><span class="stat-val">14</span></div>
+                    <div class="stat-box"><span class="stat-label">CHA</span><span class="stat-val">20</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="data-blumineck" style="display:none;">
+        <div class="modal-header">
+            <h2>BLUMINECK</h2>
+            <div class="modal-role">PLACEHOLDER</div>
+        </div>
+        <div class="char-details">
+            <div class="char-image">
+                <img src="https://images.squarespace-cdn.com/content/v1/6929ed0c08fb811934864934/78ba939a-1ec0-4d24-9f73-3f4d34eed0cc/IMG_9386.png?format=2500w">
+            </div>
+            <div class="char-info">
+                <h4>Bloom</h4>
+                <p><strong>Class:</strong> Level 5 Ranger (Fey Wanderer)</p>
+                <p><strong>Species:</strong> Eladrin</p>
+                
+                <div class="stat-grid">
+                    <div class="stat-box"><span class="stat-label">STR</span><span class="stat-val">14</span></div>
+                    <div class="stat-box"><span class="stat-label">DEX</span><span class="stat-val">20</span></div>
+                    <div class="stat-box"><span class="stat-label">CON</span><span class="stat-val">15</span></div>
+                    <div class="stat-box"><span class="stat-label">INT</span><span class="stat-val">14</span></div>
+                    <div class="stat-box"><span class="stat-label">WIS</span><span class="stat-val">18</span></div>
+                    <div class="stat-box"><span class="stat-label">CHA</span><span class="stat-val">9</span></div>
+                </div>
+                <div class="char-extras" style="margin-top: 20px;">
+                    <h4 style="border-bottom: 2px solid #5c4033; padding-bottom: 5px; margin-bottom: 10px; color: #d32f2f;">KEY FEATS & TRAITS</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 8px;"><strong>👻 Dreadful Strikes:</strong> Deals extra 1d4 Psychic damage when he hits a target.</li>
+                        <li style="margin-bottom: 8px;"><strong>🦋 Otherworldly Glamour:</strong> Adds Wisdom modifier to Charisma checks.</li>
+                        <li style="margin-bottom: 8px;"><strong>✨ Fey Step:</strong> As an Eladrin, he can teleport 30ft as a bonus action.</li>
+                        <li style="margin-bottom: 8px;"><strong>👟 Speedy:</strong>+10ft Speed. Hit-and-run without provoking attacks.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="data-bensei" style="display:none;">
+        <div class="modal-header">
+            <h2>INSTRUCTOR BENSEI</h2>
+            <div class="modal-role">Meteor Punch</div>
+        </div>
+        <div class="char-details">
+            <div class="char-image">
+                <img src="https://images.squarespace-cdn.com/content/v1/6929ed0c08fb811934864934/65165b42-c856-4f15-8616-253cea7c0b95/Profile+photo+%28all+platforms%29.jpg?format=2500w">
+            </div>
+            <div class="char-info">
+                <h4>Unknown</h4>
+                <p><strong>Class:</strong>Level 5 Monk (Unknown)</p>
+                <p><strong>Species:</strong> Unknown</p>
+                
+                <div class="stat-grid">
+                    <div class="stat-box"><span class="stat-label">STR</span><span class="stat-val">-</span></div>
+                    <div class="stat-box"><span class="stat-label">DEX</span><span class="stat-val">-</span></div>
+                    <div class="stat-box"><span class="stat-label">CON</span><span class="stat-val">-</span></div>
+                    <div class="stat-box"><span class="stat-label">INT</span><span class="stat-val">-</span></div>
+                    <div class="stat-box"><span class="stat-label">WIS</span><span class="stat-val">-</span></div>
+                    <div class="stat-box"><span class="stat-label">CHA</span><span class="stat-val">-</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="data-tater" style="display:none;">
+        <div class="modal-header">
+            <h2>TATER THE BARD</h2>
+            <div class="modal-role">He Who Is Controlling The Universe</div>
+        </div>
+        <p style="text-align: center; font-style: italic;">"I am not your enemy. The dice are."</p>
+        <div class="char-details">
+             <div class="char-image" style="margin: 0 auto;">
+                <img src="https://images.squarespace-cdn.com/content/v1/6929ed0c08fb811934864934/97aa97d7-409c-4db4-bea3-3bf19c1e0613/IMG_20251128_132646.jpg?format=2500w">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("characterModal");
+        var modalBody = document.getElementById("modal-body");
+
+        function openModal(characterName) {
+            var dataDiv = document.getElementById("data-" + characterName);
+            if(dataDiv) {
+                modalBody.innerHTML = dataDiv.innerHTML;
+                modal.style.display = "block";
+                document.body.style.overflow = "hidden";
+            }
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
